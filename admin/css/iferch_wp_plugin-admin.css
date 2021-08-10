@@ -1,0 +1,248 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.iferch-logo {
+	width: 100px;
+	height: 90px;
+}
+
+.iferch-header-box {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 2rem;
+}
+
+.iferch-text-bold {
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.iferch-row {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.iferch-no-margin {
+	margin: 0;
+}
+
+.iferch-form-control {
+	display: block;
+	width: 100% !important;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 0.25rem;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	max-width: 100% !important;
+}
+
+.iferch-form-control-flex {
+	display: flex !important;
+}
+
+.iti {
+	width: 100% !important;
+}
+
+.iferch-autocomplete {
+	position: relative;
+	display: inline-block;
+}
+
+/* input {
+border: 1px solid transparent;
+background-color: #f1f1f1;
+padding: 10px;
+font-size: 16px;
+}
+
+input[type=text] {
+background-color: #f1f1f1;
+width: 100%;
+}
+
+input[type=submit] {
+background-color: DodgerBlue;
+color: #fff;
+cursor: pointer;
+} */
+
+.iferch-autocomplete-items {
+	position: absolute;
+	border: 1px solid #d4d4d4;
+	border-bottom: none;
+	border-top: none;
+	z-index: 9999;
+	/*position the autocomplete items to be the same width as the container:*/
+	top: 100%;
+	left: 0;
+	right: 0;
+}
+
+.iferch-autocomplete-items div {
+	padding: 10px;
+	cursor: pointer;
+	background-color: #fff;
+	border-bottom: 1px solid #d4d4d4;
+}
+
+/*when hovering an item:*/
+.iferch-autocomplete-items div:hover {
+	background-color: #e9e9e9;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.iferch-autocomplete-active {
+	background-color: DodgerBlue !important;
+	color: #ffffff;
+}
+
+.iferch-rule {
+	margin: 0;
+}
+
+.iferch-li {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid rgb(182, 179, 179);
+}
+
+.iferch-li span {
+	font-size: 14px;
+}
+
+.iferch-ul {
+	margin: 0;
+	padding: 5px 0 0 0;
+}
+
+.iferch-bold {
+	font-weight: bold;
+}
+
+.iferch-show-loader {
+	display: block;
+}
+
+.iferch-hide-loader {
+	display: none;
+}
+
+.iferch-hide{
+    display: none;
+}
+
+.iferch-show{
+    display: block;
+}
+
+.iferch-message-box {
+	font-size: 14px;
+	/* border: 1px solid black; */
+	padding: 5px 10px;
+	border-radius: 5px;
+	min-width: 200px;
+	text-align: center;
+	color: white;
+	opacity: 0;
+	transition: opacity 2s;
+}
+
+.iferch-message-box-error {
+	background-color: red;
+	opacity: 1;
+}
+
+.iferch-message-box-warning {
+	background-color: rgba(255, 200, 0, 0.957);
+	opacity: 1;
+}
+
+.iferch-message-box-success {
+	background-color: green;
+	opacity: 1;
+}
+
+.iferch-show-message {
+	opacity: 1;
+}
+
+.iferch-hide-message {
+	opacity: 0;
+}
+
+.iferch-small-text-in-table {
+	font-size: 12px;
+}
+
+.iferch-no-padding {
+	padding: 0;
+}
+
+.iferch-badge-success {
+	background-color: #28a745;
+}
+
+.iferch-badge-primary {
+	background-color: #007bff;
+}
+
+.iferch-badge-secondary {
+	background-color: #6c757d;
+}
+
+.close {
+	border: none;
+	background: none;
+}
+
+.iferch-drop-off {
+	width: 90%;
+	margin: 10px auto;
+	max-height: 150px;
+	overflow-y: scroll;
+}
+
+.iferch-droff-list {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 15px;
+	background-color: rgb(243, 242, 242);
+	padding: 5px 15px;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+.iferch-margin-10 {
+	margin-right: 10px;
+}
+
+.iferch-pointer {
+	cursor: pointer;
+}
+
+.ferch-label{
+    font-size: 11px;
+}
+
+.iferch-add-drop-off-btn{
+    border: none;
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
