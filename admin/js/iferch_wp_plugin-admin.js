@@ -30,7 +30,7 @@
 	 */
 })(jQuery);
 
-const url = 'https://www.iferch.com/iferchbeta/api/v1';
+const url = 'https://www.iferch.com/api/v1';
 let apiKey = '';
 let serviceId = '';
 
@@ -564,9 +564,9 @@ function makeSingleDelivery() {
 		vehicleId: selectedVehicleType,
 		deliveryType: 'SINGLE',
 		packageTypeId: selectedPackageType,
-		pickupPhoneCode: selectedRecipientCountryCode,
+		pickupPhoneCode: selectedPickupCountryCode,
 		pickupPhoneNumber: pickupPhone,
-		receiverPhoneCode: recipientPhone,
+		receiverPhoneCode: selectedRecipientCountryCode,
 		deliveryInstructions: deliveryMessage,
 		packageDetails: packageDetails,
 		pickUpInstructions: pickupMessage,
@@ -859,7 +859,7 @@ function validateInputs() {
 	}
 
 	if (recipientPhone == '' || !iti_recipient.isValidNumber()) {
-		showErrorMessage2('Ente a valid recipient phone number');
+		showErrorMessage2('Enter a valid recipient phone number');
 		return false;
 	}
 
@@ -1241,7 +1241,10 @@ function fetchMultiFormFields() {
 				element.setAttribute('type', 'text');
 				element.setAttribute('class', 'form-control mt-3');
 				element.setAttribute('placeholder', 'search drop off location');
-				iferch_multi_modal_body.appendChild(element);
+				const div = document.createElement('DIV');
+				div.style.position = "relative";
+            	div.appendChild(element)
+				iferch_multi_modal_body.appendChild(div);
 				autocomplete(document.getElementById('iferch-myInput2'), 'destination');
 			} else {
 				showErrorMessage(data.message);
